@@ -83,7 +83,7 @@
                         <span class="material-icons text-blue-600 text-2xl">business</span>
                         <div>
                             <h3 class="font-semibold text-gray-900">Publisher</h3>
-                            <p class="text-gray-600 text-sm">nline.io</p>
+                            <p class="text-gray-600 text-sm">nLine Inc.</p>
                         </div>
                     </div>
                     
@@ -121,42 +121,26 @@
             <div class="lg:col-span-3">
                 <div class="bg-white rounded-lg shadow-sm p-8">
                     <h2 class="text-3xl font-bold text-gray-900 mb-6">MF Power Data (2017-2025)</h2>
-                    
-                    <!-- Description -->
-                    <div class="prose max-w-none mb-8">
-                        <p class="text-gray-700 mb-4">
-                            This is a repository of data collected from a group of Aucma CFD-50 vaccine storage 
-                            refrigerators (hereafter referred to as a "Device" or "Devices") from 2017 Q2 through
-                            2025 Q2. The Devices were designed by the New Horizons team of Global Health Labs.
-                        </p>
-                        <p class="text-gray-700 mb-4">
-                            The data is an AC power subset of the complete engineering data stream from the Devices, 
-                            which includes temperature, error messages, and other sensors for analyzing refrigerator 
-                            performance. Data from those sensors and debugging messages are not included in the MF Power Data.
-                        </p>
-                        <p class="text-gray-700">
-                            The New Horizons team analyzed the AC power data to improve power conditioning equipment 
-                            standards and reduce damage from AC power problems. This work was not exhaustive and the 
-                            repository aims to enable researchers to extend it.
-                        </p>
-                    </div>
 
-                    <!-- Access & Use -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                        <div class="flex items-center space-x-3">
-                            <span class="material-icons text-green-600 text-2xl">public</span>
-                            <div>
-                                <h3 class="font-semibold text-gray-900">Public Access</h3>
-                                <p class="text-gray-600 text-sm">These datasets are intended for public access and use.</p>
+                    <!-- Access & Use Information -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Access & Use Information</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="flex items-center space-x-3">
+                                <span class="material-icons text-green-600 text-2xl">public</span>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Public</h4>
+                                    <p class="text-gray-600 text-sm">These datasets are intended for public access and use.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <span class="material-icons text-blue-600 text-2xl">description</span>
-                            <div>
-                                <h3 class="font-semibold text-gray-900">License</h3>
-                                <p class="text-gray-600 text-sm">
-                                    <a href="#" class="text-blue-600 hover:underline">See this page for license information</a>
-                                </p>
+                            <div class="flex items-center space-x-3">
+                                <span class="material-icons text-blue-600 text-2xl">description</span>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">License</h4>
+                                    <p class="text-gray-600 text-sm">
+                                        <a href="#" class="text-blue-600 hover:underline">See this page for license information</a>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -165,35 +149,104 @@
                     <div class="mb-8">
                         <h3 class="text-xl font-semibold text-gray-900 mb-4">Metadata</h3>
                         <div class="overflow-x-auto">
-                            <table class="min-w-full divide-y divide-gray-200">
-                                <tbody class="bg-white divide-y divide-gray-200">
-                                    <tr>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Resource Type</td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Dataset</td>
+                            <table class="min-w-full border border-gray-300">
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr class="bg-white">
+                                        <td class="px-6 py-4 border-r border-gray-300 text-sm font-medium text-gray-900">Resource Type</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">Dataset</td>
                                     </tr>
-                                    <tr>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Publisher</td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">nLine Inc.</td>
+                                    <tr class="bg-gray-50">
+                                        <td class="px-6 py-4 border-r border-gray-300 text-sm font-medium text-gray-900">Creators</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">New Horizons Team, Global Health Labs</td>
                                     </tr>
-                                    <tr>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Maintainer</td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">nLine Inc.</td>
+                                    <tr class="bg-white">
+                                        <td class="px-6 py-4 border-r border-gray-300 text-sm font-medium text-gray-900">Publisher</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">nLine Inc.</td>
                                     </tr>
-                                    <tr>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Category</td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Public health</td>
+                                    <tr class="bg-gray-50">
+                                        <td class="px-6 py-4 border-r border-gray-300 text-sm font-medium text-gray-900">Maintainer</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">nLine Inc.</td>
                                     </tr>
-                                    <tr>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Public Access Level</td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Public</td>
+                                    <tr class="bg-white">
+                                        <td class="px-6 py-4 border-r border-gray-300 text-sm font-medium text-gray-900">Data first published</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500"></td>
                                     </tr>
-                                    <tr>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">License</td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                    <tr class="bg-gray-50">
+                                        <td class="px-6 py-4 border-r border-gray-300 text-sm font-medium text-gray-900">Data last modified</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500"></td>
+                                    </tr>
+                                    <tr class="bg-white">
+                                        <td class="px-6 py-4 border-r border-gray-300 text-sm font-medium text-gray-900">Category</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">Energy, Public Health</td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="px-6 py-4 border-r border-gray-300 text-sm font-medium text-gray-900">Public Access Level</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">Public</td>
+                                    </tr>
+                                    <tr class="bg-white">
+                                        <td class="px-6 py-4 border-r border-gray-300 text-sm font-medium text-gray-900">License</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">
                                             <a href="http://creativecommons.org/publicdomain/zero/1.0/legalcode" class="text-blue-600 hover:underline">
                                                 http://creativecommons.org/publicdomain/zero/1.0/legalcode
                                             </a>
                                         </td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="px-6 py-4 border-r border-gray-300 text-sm font-medium text-gray-900">Total data size</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">Approx. 250 GB</td>
+                                    </tr>
+                                    <tr class="bg-white">
+                                        <td class="px-6 py-4 border-r border-gray-300 text-sm font-medium text-gray-900">Total row count</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">> 10 billion</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Variables Table -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Variables Table</h3>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-r border-gray-300">Variable name</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-r border-gray-300">Role</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-r border-gray-300">Type</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 border-r border-gray-300">measuredDtm</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 border-r border-gray-300">Feature</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 border-r border-gray-300">datetime</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">Time that the sensor values were recorded, with the time referenced to a real-time clock managed by the Device. The native datatype is datetime2(0), which is kept to a full second.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 border-r border-gray-300">createdDtm</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 border-r border-gray-300">Feature</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 border-r border-gray-300">datetime</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">The time that the data was inserted into the database server. The native datatype is datetime2(3), which is kept to a millisecond.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 border-r border-gray-300">line_frequency</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 border-r border-gray-300">Feature</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 border-r border-gray-300">Continuous</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">Line frequency in Hz.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 border-r border-gray-300">line_voltage</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 border-r border-gray-300">Feature</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 border-r border-gray-300">Continuous</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">Line voltage in VRMS.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 border-r border-gray-300">line_current</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 border-r border-gray-300">Feature</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 border-r border-gray-300">Continuous</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">Line current in Amps RMS.</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -205,11 +258,11 @@
                         <h3 class="text-xl font-semibold text-gray-900 mb-4">Access Datasets</h3>
                         <div class="space-y-4">
                             <a href="kenya-power-data.html" class="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                                <span class="material-icons text-blue-600 text-2xl">map</span>
+                                <span class="material-icons text-blue-600 text-2xl">folder</span>
                                 <span class="font-medium text-gray-900">Kenya MF Power Dataset</span>
                             </a>
                             <div class="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg">
-                                <span class="material-icons text-blue-600 text-2xl">map</span>
+                                <span class="material-icons text-blue-600 text-2xl">folder</span>
                                 <span class="font-medium text-gray-900">Nigeria MF Power Dataset</span>
                             </div>
                         </div>
