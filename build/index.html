@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GH+ Labs - Data Catalog</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="home.html">
+                        <img src="public/gh-labs-logo.svg" alt="GH+ Labs" class="h-12 w-auto hover:opacity-80 transition-opacity">
+                    </a>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-blue-600 border-b-2 border-blue-600 pb-1 font-medium">DATA</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">CONTACT</a>
+                </nav>
+                
+                <!-- User Guide -->
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center text-gray-600 hover:text-gray-900">
+                        <span class="material-icons text-lg mr-1">menu_book</span>
+                        <span class="text-sm font-medium">User Guide</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Data Catalog Banner -->
+        <div class="bg-blue-600 text-white py-4 px-6 rounded-lg mb-8">
+            <div class="flex items-center justify-between">
+                <h1 class="text-2xl font-bold">DATA CATALOG</h1>
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center text-sm">
+                        <span class="material-icons text-lg mr-1">home</span>
+                        <span>/ Datasets</span>
+                    </div>
+                    <button class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg flex items-center text-sm font-medium">
+                        <span class="material-icons text-lg mr-1">chat_bubble</span>
+                        Feedback
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dataset Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Sidebar -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-lg shadow-sm p-6 space-y-6">
+                    <!-- Countries -->
+                    <div class="flex items-start space-x-3">
+                        <span class="material-icons text-blue-600 text-2xl">public</span>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">Countries covered</h3>
+                            <p class="text-gray-600 text-sm">Kenya and Nigeria</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Publisher -->
+                    <div class="flex items-start space-x-3">
+                        <span class="material-icons text-blue-600 text-2xl">business</span>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">Publisher</h3>
+                            <p class="text-gray-600 text-sm">nline.io</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact -->
+                    <div class="flex items-start space-x-3">
+                        <span class="material-icons text-blue-600 text-2xl">email</span>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">Contact</h3>
+                            <p class="text-gray-600 text-sm">info@nline.io</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Share -->
+                    <div class="flex items-start space-x-3">
+                        <span class="material-icons text-blue-600 text-2xl">share</span>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">Share</h3>
+                            <div class="flex space-x-2 mt-2">
+                                <a href="#" class="text-gray-600 hover:text-gray-900">
+                                    <span class="material-icons text-lg">close</span>
+                                </a>
+                                <a href="#" class="text-gray-600 hover:text-gray-900">
+                                    <span class="material-icons text-lg">facebook</span>
+                                </a>
+                                <a href="#" class="text-gray-600 hover:text-gray-900">
+                                    <span class="material-icons text-lg">linkedin</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="lg:col-span-3">
+                <div class="bg-white rounded-lg shadow-sm p-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">MF Power Data (2017-2025)</h2>
+                    
+                    <!-- Description -->
+                    <div class="prose max-w-none mb-8">
+                        <p class="text-gray-700 mb-4">
+                            This is a repository of data collected from a group of Aucma CFD-50 vaccine storage 
+                            refrigerators (hereafter referred to as a "Device" or "Devices") from 2017 Q2 through
+                            2025 Q2. The Devices were designed by the New Horizons team of Global Health Labs.
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            The data is an AC power subset of the complete engineering data stream from the Devices, 
+                            which includes temperature, error messages, and other sensors for analyzing refrigerator 
+                            performance. Data from those sensors and debugging messages are not included in the MF Power Data.
+                        </p>
+                        <p class="text-gray-700">
+                            The New Horizons team analyzed the AC power data to improve power conditioning equipment 
+                            standards and reduce damage from AC power problems. This work was not exhaustive and the 
+                            repository aims to enable researchers to extend it.
+                        </p>
+                    </div>
+
+                    <!-- Access & Use -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-center space-x-3">
+                            <span class="material-icons text-green-600 text-2xl">public</span>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Public Access</h3>
+                                <p class="text-gray-600 text-sm">These datasets are intended for public access and use.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="material-icons text-blue-600 text-2xl">description</span>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">License</h3>
+                                <p class="text-gray-600 text-sm">
+                                    <a href="#" class="text-blue-600 hover:underline">See this page for license information</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Metadata Table -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Metadata</h3>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200">
+                                <tbody class="bg-white divide-y divide-gray-200">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Resource Type</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Dataset</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Publisher</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">nLine Inc.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Maintainer</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">nLine Inc.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Category</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Public health</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Public Access Level</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Public</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">License</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                            <a href="http://creativecommons.org/publicdomain/zero/1.0/legalcode" class="text-blue-600 hover:underline">
+                                                http://creativecommons.org/publicdomain/zero/1.0/legalcode
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Access Datasets -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Access Datasets</h3>
+                        <div class="space-y-4">
+                            <a href="kenya-power-data.html" class="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                                <span class="material-icons text-blue-600 text-2xl">map</span>
+                                <span class="font-medium text-gray-900">Kenya MF Power Dataset</span>
+                            </a>
+                            <div class="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg">
+                                <span class="material-icons text-blue-600 text-2xl">map</span>
+                                <span class="font-medium text-gray-900">Nigeria MF Power Dataset</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Documentation -->
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Additional Documentation</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center space-x-2">
+                                <span class="material-icons text-gray-400 text-sm">arrow_forward</span>
+                                <span class="text-gray-700">Power Quality Challenges in Low-Resource Settings</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span class="material-icons text-gray-400 text-sm">arrow_forward</span>
+                                <span class="text-gray-700">Overvoltage Challenges in Low-Resource Settings</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center mb-4 md:mb-0">
+                    <a href="home.html">
+                        <img src="public/gh-labs-logo.svg" alt="GH+ Labs" class="h-12 w-auto hover:opacity-80 transition-opacity">
+                    </a>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="flex space-x-6 mb-4 md:mb-0">
+                    <a href="#" class="text-gray-600 hover:text-gray-900">About</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900">Website Policies</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900">Sitemap</a>
+                </nav>
+                
+                <!-- Social Links -->
+                <div class="flex items-center space-x-4">
+                    <span class="text-gray-600 text-sm">Stay in touch:</span>
+                    <a href="#" class="text-gray-600 hover:text-gray-900">
+                        <span class="material-icons">linkedin</span>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900">
+                        <span class="material-icons">close</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
