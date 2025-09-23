@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenya MF Power Data - GH+ Labs</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            right: 0;
+            top: 100%;
+            margin-top: 4px;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.2s;
+        }
+        .dropdown-content a:hover {
+            background-color: #f3f4f6;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="home.html">
+                        <img src="gh-labs-logo.svg" alt="GH+ Labs" class="h-12 w-auto hover:opacity-80 transition-opacity">
+                    </a>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-blue-600 border-b-2 border-blue-600 pb-1 font-medium">DATA</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">CONTACT</a>
+                </nav>
+                
+                <!-- User Guide -->
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center text-gray-600 hover:text-gray-900">
+                        <span class="material-icons text-lg mr-1">menu_book</span>
+                        <span class="text-sm font-medium">User Guide</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Breadcrumb Banner -->
+        <div class="bg-blue-600 text-white py-4 px-6 rounded-lg mb-8">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center text-sm">
+                    <span class="material-icons text-lg mr-1">home</span>
+                    <span>/ Datasets / Kenya_data</span>
+                </div>
+                <button class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg flex items-center text-sm font-medium">
+                    <span class="material-icons text-lg mr-1">chat_bubble</span>
+                    Feedback
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Left Sidebar -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-lg shadow-sm p-6 space-y-6">
+                    <!-- Country -->
+                    <div class="flex items-start space-x-3">
+                        <span class="material-icons text-blue-600 text-2xl">public</span>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">Country Covered</h3>
+                            <p class="text-gray-600 text-sm">Kenya</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Publisher -->
+                    <div class="flex items-start space-x-3">
+                        <span class="material-icons text-blue-600 text-2xl">business</span>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">Publisher</h3>
+                            <p class="text-gray-600 text-sm">nline.io</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact -->
+                    <div class="flex items-start space-x-3">
+                        <span class="material-icons text-blue-600 text-2xl">email</span>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">Contact</h3>
+                            <p class="text-gray-600 text-sm">info@nline.io</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Share -->
+                    <div class="flex items-start space-x-3">
+                        <span class="material-icons text-blue-600 text-2xl">share</span>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">Share</h3>
+                            <div class="flex space-x-2 mt-2">
+                                <a href="#" class="text-gray-600 hover:text-gray-900">
+                                    <span class="material-icons text-lg">close</span>
+                                </a>
+                                <a href="#" class="text-gray-600 hover:text-gray-900">
+                                    <span class="material-icons text-lg">facebook</span>
+                                </a>
+                                <a href="#" class="text-gray-600 hover:text-gray-900">
+                                    <span class="material-icons text-lg">linkedin</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content Panel -->
+            <div class="lg:col-span-3">
+                <div class="bg-white rounded-lg shadow-sm p-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Kenya MF Power Data</h2>
+                    
+                    <!-- Description -->
+                    <div class="prose max-w-none mb-8">
+                        <p class="text-gray-700 mb-4">
+                            This is a repository of data collected from a group of Aucma CFD-50 vaccine storage 
+                            refrigerators (hereafter referred to as a "Device" or "Devices") from 2017 Q2 through
+                            2025 Q2. The Devices were designed by the New Horizons team of Global Health Labs.
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            The data is an AC power subset of the complete engineering data stream from the Devices, 
+                            which includes temperature, error messages, and other sensors for analyzing refrigerator 
+                            performance. Data from those sensors and debugging messages are not included in the MF Power Data.
+                        </p>
+                        <p class="text-gray-700">
+                            The New Horizons team analyzed the AC power data to improve power conditioning equipment 
+                            standards and reduce damage from AC power problems. This work was not exhaustive and the 
+                            repository aims to enable researchers to extend it.
+                        </p>
+                    </div>
+
+                    <!-- Search and Order -->
+                    <div class="flex flex-col sm:flex-row gap-4 mb-6">
+                        <div class="flex-1">
+                            <input type="text" placeholder="Search datasets..." 
+                                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div class="sm:w-48">
+                            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                <option>Order by: Year</option>
+                                <option>Order by: Size</option>
+                                <option>Order by: Name</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Dataset Count -->
+                    <div class="mb-6">
+                        <p class="text-gray-600 font-medium">7 datasets found</p>
+                    </div>
+
+                    <!-- Dataset List -->
+                    <div class="space-y-4 mb-8">
+                        <!-- Kenya Q2 2017 -->
+                        <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                            <div class="flex items-center space-x-4">
+                                <span class="material-icons text-green-600 text-2xl">description</span>
+                                <div>
+                                    <h3 class="font-medium text-gray-900">Kenya Q2 2017</h3>
+                                    <p class="text-sm text-gray-500">44 MB</p>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center text-sm font-medium">
+                                    Explore
+                                    <span class="material-icons text-sm ml-1">arrow_drop_down</span>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="#" onclick="showMoreInfo('Kenya Q2 2017')">
+                                        <span class="material-icons text-sm">info</span>
+                                        More information
+                                    </a>
+                                    <a href="kenya/Kenya_2017_2.txt" download>
+                                        <span class="material-icons text-sm">download</span>
+                                        Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Kenya Q3 2017 -->
+                        <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                            <div class="flex items-center space-x-4">
+                                <span class="material-icons text-green-600 text-2xl">description</span>
+                                <div>
+                                    <h3 class="font-medium text-gray-900">Kenya Q3 2017</h3>
+                                    <p class="text-sm text-gray-500">58 MB</p>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center text-sm font-medium">
+                                    Explore
+                                    <span class="material-icons text-sm ml-1">arrow_drop_down</span>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="#" onclick="showMoreInfo('Kenya Q3 2017')">
+                                        <span class="material-icons text-sm">info</span>
+                                        More information
+                                    </a>
+                                    <a href="kenya/Kenya_2017_3.txt" download>
+                                        <span class="material-icons text-sm">download</span>
+                                        Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Kenya Q4 2017 -->
+                        <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                            <div class="flex items-center space-x-4">
+                                <span class="material-icons text-green-600 text-2xl">description</span>
+                                <div>
+                                    <h3 class="font-medium text-gray-900">Kenya Q4 2017</h3>
+                                    <p class="text-sm text-gray-500">240 MB</p>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center text-sm font-medium">
+                                    Explore
+                                    <span class="material-icons text-sm ml-1">arrow_drop_down</span>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="#" onclick="showMoreInfo('Kenya Q4 2017')">
+                                        <span class="material-icons text-sm">info</span>
+                                        More information
+                                    </a>
+                                    <a href="kenya/Kenya_2017_4.txt" download>
+                                        <span class="material-icons text-sm">download</span>
+                                        Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Kenya Q1 2018 -->
+                        <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                            <div class="flex items-center space-x-4">
+                                <span class="material-icons text-green-600 text-2xl">description</span>
+                                <div>
+                                    <h3 class="font-medium text-gray-900">Kenya Q1 2018</h3>
+                                    <p class="text-sm text-gray-500">278 MB</p>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center text-sm font-medium">
+                                    Explore
+                                    <span class="material-icons text-sm ml-1">arrow_drop_down</span>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="#" onclick="showMoreInfo('Kenya Q1 2018')">
+                                        <span class="material-icons text-sm">info</span>
+                                        More information
+                                    </a>
+                                    <a href="kenya/Kenya_2018_1.txt" download>
+                                        <span class="material-icons text-sm">download</span>
+                                        Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Kenya Q2 2018 -->
+                        <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                            <div class="flex items-center space-x-4">
+                                <span class="material-icons text-green-600 text-2xl">description</span>
+                                <div>
+                                    <h3 class="font-medium text-gray-900">Kenya Q2 2018</h3>
+                                    <p class="text-sm text-gray-500">1.8 GB</p>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center text-sm font-medium">
+                                    Explore
+                                    <span class="material-icons text-sm ml-1">arrow_drop_down</span>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="#" onclick="showMoreInfo('Kenya Q2 2018')">
+                                        <span class="material-icons text-sm">info</span>
+                                        More information
+                                    </a>
+                                    <a href="kenya/Kenya_2018_2.txt" download>
+                                        <span class="material-icons text-sm">download</span>
+                                        Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Kenya Q3 2018 -->
+                        <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                            <div class="flex items-center space-x-4">
+                                <span class="material-icons text-green-600 text-2xl">description</span>
+                                <div>
+                                    <h3 class="font-medium text-gray-900">Kenya Q3 2018</h3>
+                                    <p class="text-sm text-gray-500">2.7 GB</p>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center text-sm font-medium">
+                                    Explore
+                                    <span class="material-icons text-sm ml-1">arrow_drop_down</span>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="#" onclick="showMoreInfo('Kenya Q3 2018')">
+                                        <span class="material-icons text-sm">info</span>
+                                        More information
+                                    </a>
+                                    <a href="kenya/Kenya_2018_3.txt" download>
+                                        <span class="material-icons text-sm">download</span>
+                                        Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Kenya Q4 2018 -->
+                        <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                            <div class="flex items-center space-x-4">
+                                <span class="material-icons text-green-600 text-2xl">description</span>
+                                <div>
+                                    <h3 class="font-medium text-gray-900">Kenya Q4 2018</h3>
+                                    <p class="text-sm text-gray-500">7.2 GB</p>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center text-sm font-medium">
+                                    Explore
+                                    <span class="material-icons text-sm ml-1">arrow_drop_down</span>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="#" onclick="showMoreInfo('Kenya Q4 2018')">
+                                        <span class="material-icons text-sm">info</span>
+                                        More information
+                                    </a>
+                                    <a href="kenya/Kenya_2018_4.txt" download>
+                                        <span class="material-icons text-sm">download</span>
+                                        Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="flex justify-center items-center space-x-2">
+                        <button class="px-3 py-2 text-gray-500 hover:text-gray-700">Previous</button>
+                        <button class="px-3 py-2 bg-blue-600 text-white rounded">1</button>
+                        <button class="px-3 py-2 text-gray-500 hover:text-gray-700">2</button>
+                        <button class="px-3 py-2 text-gray-500 hover:text-gray-700">3</button>
+                        <span class="px-3 py-2 text-gray-500">...</span>
+                        <button class="px-3 py-2 text-gray-500 hover:text-gray-700">10</button>
+                        <button class="px-3 py-2 text-gray-500 hover:text-gray-700">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center mb-4 md:mb-0">
+                    <a href="home.html">
+                        <img src="gh-labs-logo.svg" alt="GH+ Labs" class="h-12 w-auto hover:opacity-80 transition-opacity">
+                    </a>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="flex space-x-6 mb-4 md:mb-0">
+                    <a href="#" class="text-gray-600 hover:text-gray-900">About</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900">Website Policies</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900">Sitemap</a>
+                </nav>
+                
+                <!-- Social Links -->
+                <div class="flex items-center space-x-4">
+                    <span class="text-gray-600 text-sm">Stay in touch:</span>
+                    <a href="#" class="text-gray-600 hover:text-gray-900">
+                        <span class="material-icons">linkedin</span>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900">
+                        <span class="material-icons">close</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showMoreInfo(datasetName) {
+            alert(`More information about ${datasetName} will be available soon.`);
+        }
+    </script>
+</body>
+</html>
