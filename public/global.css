@@ -1,0 +1,15 @@
+/* Global styles for consistent footer positioning */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* Ensure footer stays at bottom */
+footer {
+    margin-top: auto;
+}

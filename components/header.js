@@ -1,5 +1,12 @@
 // Header Component
-export function createHeader() {
+export function createHeader(currentPage = '') {
+  const getNavClass = (page) => {
+    if (currentPage === page) {
+      return 'text-blue-600 border-b-2 border-blue-600 pb-1 font-medium';
+    }
+    return 'text-gray-600 hover:text-gray-900 font-medium';
+  };
+
   return `
     <header class="bg-white shadow-sm border-b">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -13,8 +20,8 @@ export function createHeader() {
           
           <!-- Navigation -->
           <nav class="hidden md:flex space-x-8">
-            <a href="index.html" class="text-blue-600 border-b-2 border-blue-600 pb-1 font-medium">DATA</a>
-            <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">CONTACT</a>
+            <a href="index.html" class="${getNavClass('data')}">DATA</a>
+            <a href="contact.html" class="${getNavClass('contact')}">CONTACT</a>
           </nav>
           
           <!-- User Guide -->

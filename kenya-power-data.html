@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Global CSS -->
+    <link href="public/global.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -61,10 +63,6 @@
                     <span class="material-icons text-lg mr-1">home</span>
                     <span>/ Datasets / Kenya_data</span>
                 </div>
-                <button class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg flex items-center text-sm font-medium">
-                    <span class="material-icons text-lg mr-1">chat_bubble</span>
-                    Feedback
-                </button>
             </div>
         </div>
 
@@ -281,8 +279,8 @@
         import { createHeader } from './components/header.js';
         import { createFooter } from './components/footer.js';
         
-        // Insert header
-        document.getElementById('header').innerHTML = createHeader();
+        // Insert header with current page indicator
+        document.getElementById('header').innerHTML = createHeader('data');
         
         // Insert footer
         document.getElementById('footer').innerHTML = createFooter();
