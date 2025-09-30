@@ -18,6 +18,9 @@ YELLOW := \033[1;33m
 BLUE := \033[0;34m
 NC := \033[0m # No Color
 
+# JavaScript modules directory
+COMPONENTS_DIR := components
+
 # Default target
 .PHONY: help
 help: ## Show this help message
@@ -254,6 +257,13 @@ status: ## Show current project status
 	@echo "$(YELLOW)Build directory:$(NC) $(shell [ -d $(BUILD_DIR) ] && echo "Exists" || echo "Does not exist")"
 	@echo "$(YELLOW)Last modified files:$(NC)"
 	@ls -lt *.html 2>/dev/null | head -5 || echo "No HTML files found"
+
+# JavaScript modules
+.PHONY: components
+components: ## Show available JavaScript components
+	@echo "$(BLUE)Available JavaScript components:$(NC)"
+	@ls -la $(COMPONENTS_DIR)/ 2>/dev/null || echo "No components found"
+	@echo "$(GREEN)Components ready for use in HTML pages$(NC)"
 
 # All-in-one targets
 .PHONY: all
