@@ -23,7 +23,7 @@
             <div class="flex justify-between items-center py-4">
                 <!-- Logo -->
                 <div class="flex items-center">
-                    <a href="home.html">
+                    <a href="index.html">
                         <img src="public/gh-labs-logo.svg" alt="GH+ Labs" class="h-12 w-auto hover:opacity-80 transition-opacity">
                     </a>
                 </div>
@@ -83,7 +83,7 @@
                         <span class="material-icons text-blue-600 text-2xl">business</span>
                         <div>
                             <h3 class="font-semibold text-gray-900">Publisher</h3>
-                            <p class="text-gray-600 text-sm">nline.io</p>
+                            <p class="text-gray-600 text-sm">nLine Inc.</p>
                         </div>
                     </div>
                     
@@ -141,22 +141,25 @@
                         </p>
                     </div>
 
-                    <!-- Access & Use -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                        <div class="flex items-center space-x-3">
-                            <span class="material-icons text-green-600 text-2xl">public</span>
-                            <div>
-                                <h3 class="font-semibold text-gray-900">Public Access</h3>
-                                <p class="text-gray-600 text-sm">These datasets are intended for public access and use.</p>
+                    <!-- Access & Use Information -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Access & Use Information</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="flex items-center space-x-3">
+                                <span class="material-icons text-green-600 text-2xl">public</span>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Public</h4>
+                                    <p class="text-gray-600 text-sm">These datasets are intended for public access and use.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <span class="material-icons text-blue-600 text-2xl">description</span>
-                            <div>
-                                <h3 class="font-semibold text-gray-900">License</h3>
-                                <p class="text-gray-600 text-sm">
-                                    <a href="#" class="text-blue-600 hover:underline">See this page for license information</a>
-                                </p>
+                            <div class="flex items-center space-x-3">
+                                <span class="material-icons text-blue-600 text-2xl">description</span>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">License</h4>
+                                    <p class="text-gray-600 text-sm">
+                                        <a href="#" class="text-blue-600 hover:underline">See this page for license information</a>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -172,6 +175,10 @@
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Dataset</td>
                                     </tr>
                                     <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Creators</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">New Horizons Team, Global Health Labs</td>
+                                    </tr>
+                                    <tr>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Publisher</td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">nLine Inc.</td>
                                     </tr>
@@ -180,8 +187,16 @@
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">nLine Inc.</td>
                                     </tr>
                                     <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Data first published</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Data last modified</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"></td>
+                                    </tr>
+                                    <tr>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Category</td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Public health</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Energy, Public Health</td>
                                     </tr>
                                     <tr>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Public Access Level</td>
@@ -195,6 +210,63 @@
                                             </a>
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Total data size</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Approx. 250 GB</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Total row count</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">> 10 billion</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Variables Table -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Variables Table</h3>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Variable name</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Role</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">measuredDtm</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Feature</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">datetime</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">Time that the sensor values were recorded, with the time referenced to a real-time clock managed by the Device. The native datatype is datetime2(0), which is kept to a full second.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">createdDtm</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Feature</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">datetime</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">The time that the data was inserted into the database server. The native datatype is datetime2(3), which is kept to a millisecond.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">line_frequency</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Feature</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Continuous</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">Line frequency in Hz.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">line_voltage</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Feature</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Continuous</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">Line voltage in VRMS.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">line_current</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Feature</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Continuous</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">Line current in Amps RMS.</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -205,11 +277,11 @@
                         <h3 class="text-xl font-semibold text-gray-900 mb-4">Access Datasets</h3>
                         <div class="space-y-4">
                             <a href="kenya-power-data.html" class="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                                <span class="material-icons text-blue-600 text-2xl">map</span>
+                                <span class="material-icons text-blue-600 text-2xl">folder</span>
                                 <span class="font-medium text-gray-900">Kenya MF Power Dataset</span>
                             </a>
                             <div class="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg">
-                                <span class="material-icons text-blue-600 text-2xl">map</span>
+                                <span class="material-icons text-blue-600 text-2xl">folder</span>
                                 <span class="font-medium text-gray-900">Nigeria MF Power Dataset</span>
                             </div>
                         </div>
@@ -240,7 +312,7 @@
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <!-- Logo -->
                 <div class="flex items-center mb-4 md:mb-0">
-                    <a href="home.html">
+                    <a href="index.html">
                         <img src="public/gh-labs-logo.svg" alt="GH+ Labs" class="h-12 w-auto hover:opacity-80 transition-opacity">
                     </a>
                 </div>
