@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Global CSS -->
+    <link href="public/global.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -251,11 +253,11 @@
                         <ul class="space-y-2">
                             <li class="flex items-center space-x-2">
                                 <span class="material-icons text-gray-400 text-sm">arrow_forward</span>
-                                <a href="public/docs/Power_Quality_Challenges_in_Low_Resource_Settings.pdf" class="text-gray-700 hover:text-blue-600">Power Quality Challenges in Low-Resource Settings</a>
+                                <a href="public/docs/Power_Quality_Challenges_In_Low_Resource_Settings_2019.pdf" target="_blank" class="text-gray-700 hover:text-blue-600">Power Quality Challenges in Low-Resource Settings</a>
                             </li>
                             <li class="flex items-center space-x-2">
                                 <span class="material-icons text-gray-400 text-sm">arrow_forward</span>
-                                <a href="public/docs/Overvoltage_Challenges_in_Low_Resource_Settings.pdf" class="text-gray-700 hover:text-blue-600">Overvoltage Challenges in Low-Resource Settings</a>
+                                <a href="public/docs/Overvoltage challenges in low-resource settings 5 May 2021.pdf" target="_blank" class="text-gray-700 hover:text-blue-600">Overvoltage Challenges in Low-Resource Settings</a>
                             </li>
                         </ul>
                     </div>
@@ -272,8 +274,8 @@
         import { createHeader } from './components/header.js';
         import { createFooter } from './components/footer.js';
         
-        // Insert header
-        document.getElementById('header').innerHTML = createHeader();
+        // Insert header with current page indicator
+        document.getElementById('header').innerHTML = createHeader('data');
         
         // Insert footer
         document.getElementById('footer').innerHTML = createFooter();
