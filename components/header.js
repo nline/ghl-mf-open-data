@@ -21,7 +21,6 @@ export function createHeader(currentPage = '') {
           <!-- Navigation -->
           <nav class="hidden md:flex space-x-8">
             <a href="index.html" class="${getNavClass('data')}">DATA</a>
-            <a href="contact.html" class="${getNavClass('contact')}">CONTACT</a>
           </nav>
           
           <!-- User Guide -->

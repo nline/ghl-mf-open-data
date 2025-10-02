@@ -265,6 +265,35 @@ components: ## Show available JavaScript components
 	@ls -la $(COMPONENTS_DIR)/ 2>/dev/null || echo "No components found"
 	@echo "$(GREEN)Components ready for use in HTML pages$(NC)"
 
+# AWS Lambda Backend
+.PHONY: lambda-setup
+lambda-setup: ## Setup AWS Lambda backend dependencies
+	@echo "$(BLUE)Setting up Lambda backend...$(NC)"
+	@cd backend/lambda && npm install
+	@echo "$(GREEN)Lambda backend setup complete!$(NC)"
+
+.PHONY: lambda-deploy
+lambda-deploy: ## Deploy Lambda function to AWS
+	@echo "$(BLUE)Deploying Lambda function...$(NC)"
+	@cd backend/lambda && serverless deploy
+	@echo "$(GREEN)Lambda function deployed!$(NC)"
+
+.PHONY: lambda-logs
+lambda-logs: ## View Lambda function logs
+	@echo "$(BLUE)Fetching Lambda logs...$(NC)"
+	@cd backend/lambda && serverless logs -f contact
+
+.PHONY: lambda-remove
+lambda-remove: ## Remove Lambda function from AWS
+	@echo "$(BLUE)Removing Lambda function...$(NC)"
+	@cd backend/lambda && serverless remove
+	@echo "$(GREEN)Lambda function removed!$(NC)"
+
+.PHONY: lambda-local
+lambda-local: ## Test Lambda function locally
+	@echo "$(BLUE)Starting Lambda function locally...$(NC)"
+	@cd backend/lambda && serverless offline
+
 # All-in-one targets
 .PHONY: all
 all: clean validate build test ## Run complete build pipeline
