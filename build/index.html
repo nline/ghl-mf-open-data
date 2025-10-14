@@ -30,7 +30,7 @@
                 <h1 class="text-2xl font-bold">DATA CATALOG</h1>
                 <div class="flex items-center space-x-4">
                     <div class="flex items-center text-sm">
-                        <span class="material-icons text-lg mr-1">home</span>
+                        <a href="index.html"><span class="material-icons text-lg mr-1">home</span></a>
                         <span>/ Datasets</span>
                     </div>
                 </div>
@@ -40,61 +40,7 @@
         <!-- Dataset Content -->
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
             <!-- Sidebar -->
-            <div class="lg:col-span-1">
-                <div class="bg-white rounded-lg shadow-sm p-6 space-y-6">
-                    <!-- Countries -->
-                    <div class="flex items-start space-x-3">
-                        <span class="material-icons text-blue-600 text-2xl">public</span>
-                        <div>
-                            <h3 class="font-semibold text-gray-900">Countries covered</h3>
-                            <p class="text-gray-600 text-sm">Kenya and Nigeria</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Publisher -->
-                    <div class="flex items-start space-x-3">
-                        <span class="material-icons text-blue-600 text-2xl">business</span>
-                        <div>
-                            <h3 class="font-semibold text-gray-900">Publisher</h3>
-                            <p class="text-gray-600 text-sm">nLine Inc.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Contact -->
-                    <div class="flex items-start space-x-3">
-                        <span class="material-icons text-blue-600 text-2xl">email</span>
-                        <div>
-                            <h3 class="font-semibold text-gray-900">Contact</h3>
-                            <p class="text-gray-600 text-sm">info@nline.io</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Share -->
-                    <div class="flex items-start space-x-3">
-                        <span class="material-icons text-blue-600 text-2xl">share</span>
-                        <div>
-                            <h3 class="font-semibold text-gray-900">Share</h3>
-                            <div class="flex space-x-2 mt-2">
-                                <a href="#" class="text-gray-600 hover:text-gray-900">
-                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                                    </svg>
-                                </a>
-                                <a href="#" class="text-gray-600 hover:text-gray-900">
-                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                                    </svg>
-                                </a>
-                                <a href="#" class="text-gray-600 hover:text-gray-900">
-                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M22 21.968H17.859V15.4807C17.859 13.934 17.8311 11.9422 15.7049 11.9422C13.5481 11.9422 13.2178 13.6273 13.2178 15.3671V21.9675H9.07683V8.63045H13.0522V10.4534H13.1058C13.5036 9.77309 14.0786 9.2134 14.7695 8.83408C15.4602 8.45467 16.241 8.2698 17.0285 8.29915C21.2258 8.29915 22 11.0603 22 14.6519V21.968ZM4.40396 6.80704C3.92859 6.80714 3.46386 6.66627 3.06855 6.40223C2.67323 6.1382 2.3651 5.76285 2.18311 5.32368C2.00112 4.8845 1.95344 4.40122 2.04611 3.93494C2.13879 3.46868 2.36765 3.04036 2.70376 2.70417C3.03986 2.36797 3.46811 2.13901 3.93435 2.04622C4.40057 1.95344 4.88385 2.001 5.32305 2.18291C5.76226 2.36481 6.13765 2.67287 6.40176 3.06814C6.66588 3.46341 6.80685 3.92813 6.80685 4.40352C6.80685 5.04088 6.55371 5.65214 6.10309 6.10287C5.65249 6.55361 5.0413 6.8069 4.40396 6.80704ZM6.47446 21.9675H2.32917V8.63045H6.47499L6.47446 21.9675Z"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div id="dataset-sidebar"></div>
 
             <!-- Main Content -->
             <div class="lg:col-span-3">
@@ -137,14 +83,6 @@
                                     <tr class="bg-gray-50">
                                         <td class="px-6 py-4 border-r border-gray-300 text-sm font-medium text-gray-900">Creators</td>
                                         <td class="px-6 py-4 text-sm text-gray-500">New Horizons Team, Global Health Labs</td>
-                                    </tr>
-                                    <tr class="bg-white">
-                                        <td class="px-6 py-4 border-r border-gray-300 text-sm font-medium text-gray-900">Publisher</td>
-                                        <td class="px-6 py-4 text-sm text-gray-500">nLine Inc.</td>
-                                    </tr>
-                                    <tr class="bg-gray-50">
-                                        <td class="px-6 py-4 border-r border-gray-300 text-sm font-medium text-gray-900">Maintainer</td>
-                                        <td class="px-6 py-4 text-sm text-gray-500">nLine Inc.</td>
                                     </tr>
                                     <tr class="bg-white">
                                         <td class="px-6 py-4 border-r border-gray-300 text-sm font-medium text-gray-900">Data first published</td>
@@ -198,16 +136,28 @@
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200">
                                     <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 border-r border-gray-300">fridgeID</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 border-r border-gray-300">Feature</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 border-r border-gray-300">Categorical</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">Unique MetaFridge identifier, used as primary key in database tables, and in time series a composite PK along with datetime stamp.</td>
+                                    </tr>
+                                    <tr>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 border-r border-gray-300">measuredDtm</td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 border-r border-gray-300">Feature</td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 border-r border-gray-300">datetime</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 border-r border-gray-300">Datetime</td>
                                         <td class="px-6 py-4 text-sm text-gray-500">Time that the sensor values were recorded, with the time referenced to a real-time clock managed by the Device. The native datatype is datetime2(0), which is kept to a full second.</td>
                                     </tr>
                                     <tr>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 border-r border-gray-300">createdDtm</td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 border-r border-gray-300">Feature</td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 border-r border-gray-300">datetime</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 border-r border-gray-300">Datetime</td>
                                         <td class="px-6 py-4 text-sm text-gray-500">The time that the data was inserted into the database server. The native datatype is datetime2(3), which is kept to a millisecond.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 border-r border-gray-300">line_current</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 border-r border-gray-300">Feature</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 border-r border-gray-300">Continuous</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">Line current in Amps.</td>
                                     </tr>
                                     <tr>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 border-r border-gray-300">line_frequency</td>
@@ -222,10 +172,10 @@
                                         <td class="px-6 py-4 text-sm text-gray-500">Line voltage in VRMS.</td>
                                     </tr>
                                     <tr>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 border-r border-gray-300">line_current</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 border-r border-gray-300">line_real_power</td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 border-r border-gray-300">Feature</td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 border-r border-gray-300">Continuous</td>
-                                        <td class="px-6 py-4 text-sm text-gray-500">Line current in Amps RMS.</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">Real power drawn from the line.</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -240,10 +190,12 @@
                                 <span class="material-icons text-blue-600 text-2xl">folder</span>
                                 <span class="font-medium text-gray-900">Kenya MF Power Dataset</span>
                             </a>
+                            <!--
                             <div class="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg">
                                 <span class="material-icons text-blue-600 text-2xl">folder</span>
                                 <span class="font-medium text-gray-900">Nigeria MF Power Dataset</span>
                             </div>
+                            -->
                         </div>
                     </div>
 
@@ -273,9 +225,13 @@
     <script type="module">
         import { createHeader } from './components/header.js';
         import { createFooter } from './components/footer.js';
+        import { createDatasetSidebar } from './components/dataset-sidebar.js';
         
         // Insert header with current page indicator
         document.getElementById('header').innerHTML = createHeader('data');
+        
+        // Insert dataset sidebar
+        document.getElementById('dataset-sidebar').innerHTML = createDatasetSidebar();
         
         // Insert footer
         document.getElementById('footer').innerHTML = createFooter();

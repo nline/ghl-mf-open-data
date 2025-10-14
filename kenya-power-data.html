@@ -48,6 +48,43 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.2s;
+        }
+        .dropdown-content a:hover {
+            background-color: #f3f4f6;
+        }
+        .conversion-progress {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            min-width: 300px;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: #e5e7eb;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        .progress-fill {
+            height: 100%;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
     </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
@@ -69,61 +106,7 @@
         <!-- Main Content Area -->
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
             <!-- Left Sidebar -->
-            <div class="lg:col-span-1">
-                <div class="bg-white rounded-lg shadow-sm p-6 space-y-6">
-                    <!-- Country -->
-                    <div class="flex items-start space-x-3">
-                        <span class="material-icons text-blue-600 text-2xl">public</span>
-                        <div>
-                            <h3 class="font-semibold text-gray-900">Country Covered</h3>
-                            <p class="text-gray-600 text-sm">Kenya</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Publisher -->
-                    <div class="flex items-start space-x-3">
-                        <span class="material-icons text-blue-600 text-2xl">business</span>
-                        <div>
-                            <h3 class="font-semibold text-gray-900">Publisher</h3>
-                            <p class="text-gray-600 text-sm">nline.io</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Contact -->
-                    <div class="flex items-start space-x-3">
-                        <span class="material-icons text-blue-600 text-2xl">email</span>
-                        <div>
-                            <h3 class="font-semibold text-gray-900">Contact</h3>
-                            <p class="text-gray-600 text-sm">info@nline.io</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Share -->
-                    <div class="flex items-start space-x-3">
-                        <span class="material-icons text-blue-600 text-2xl">share</span>
-                        <div>
-                            <h3 class="font-semibold text-gray-900">Share</h3>
-                            <div class="flex space-x-2 mt-2">
-                                <a href="#" class="text-gray-600 hover:text-gray-900">
-                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                                    </svg>
-                                </a>
-                                <a href="#" class="text-gray-600 hover:text-gray-900">
-                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                                    </svg>
-                                </a>
-                                <a href="#" class="text-gray-600 hover:text-gray-900">
-                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M22 21.968H17.859V15.4807C17.859 13.934 17.8311 11.9422 15.7049 11.9422C13.5481 11.9422 13.2178 13.6273 13.2178 15.3671V21.9675H9.07683V8.63045H13.0522V10.4534H13.1058C13.5036 9.77309 14.0786 9.2134 14.7695 8.83408C15.4602 8.45467 16.241 8.2698 17.0285 8.29915C21.2258 8.29915 22 11.0603 22 14.6519V21.968ZM4.40396 6.80704C3.92859 6.80714 3.46386 6.66627 3.06855 6.40223C2.67323 6.1382 2.3651 5.76285 2.18311 5.32368C2.00112 4.8845 1.95344 4.40122 2.04611 3.93494C2.13879 3.46868 2.36765 3.04036 2.70376 2.70417C3.03986 2.36797 3.46811 2.13901 3.93435 2.04622C4.40057 1.95344 4.88385 2.001 5.32305 2.18291C5.76226 2.36481 6.13765 2.67287 6.40176 3.06814C6.66588 3.46341 6.80685 3.92813 6.80685 4.40352C6.80685 5.04088 6.55371 5.65214 6.10309 6.10287C5.65249 6.55361 5.0413 6.8069 4.40396 6.80704ZM6.47446 21.9675H2.32917V8.63045H6.47499L6.47446 21.9675Z"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div id="dataset-sidebar"></div>
 
             <!-- Main Content Panel -->
             <div class="lg:col-span-3">
@@ -132,121 +115,51 @@
 
                     <!-- Search and Order -->
                     <div class="flex flex-col sm:flex-row gap-4 mb-6">
-                        <div class="flex-1">
-                            <input type="text" placeholder="Search datasets..." 
-                                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <div class="flex-1 relative">
+                            <input type="text" id="search-input" placeholder="Search datasets... (e.g., 'Jun', '2018', 'Aug')" 
+                                   class="w-full px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            <button id="clear-search" class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 hidden">
+                                <span class="material-icons text-lg">clear</span>
+                            </button>
                         </div>
                         <div class="sm:w-48">
-                            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                                <option>Order by: Year</option>
-                                <option>Order by: Size</option>
-                                <option>Order by: Name</option>
+                            <select id="sort-select" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                <option value="year-desc">Order by: Year (Newest First)</option>
+                                <option value="year-asc">Order by: Year (Oldest First)</option>
+                                <option value="name-asc">Order by: Name (A-Z)</option>
+                                <option value="name-desc">Order by: Name (Z-A)</option>
                             </select>
                         </div>
                     </div>
 
                     <!-- Dataset Count -->
                     <div class="mb-6">
-                        <p class="text-gray-600 font-medium">90 datasets found</p>
+                        <p class="text-gray-600 font-medium">100 datasets found</p>
+                    </div>
+                    
+                    <!-- Format Alert -->
+                    <div class="mb-6 p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <span class="material-icons text-blue-400 text-lg">info</span>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm text-blue-700">
+                                    <strong>File Format Notice:</strong> All datasets are provided in Parquet format for optimal performance and storage efficiency. 
+                                    If you wish to convert the files to CSV before use, you can do so with the 
+                                    <a href="https://pypi.org/project/parquet-csv/" target="_blank" class="text-blue-600 hover:text-blue-800 underline font-medium">free conversion utility here</a>.
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Dataset List -->
-                    <div class="space-y-4 mb-8">
-                        <!-- Kenya January 2017 -->
-                        <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
-                            <div class="flex items-center space-x-4">
-                                <span class="material-icons text-green-600 text-2xl">description</span>
-                                <div>
-                                    <h3 class="font-medium text-gray-900">Kenya January 2017</h3>
-                                </div>
-                            </div>
-                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center text-sm font-medium">
-                                <span class="material-icons text-sm mr-1">download</span>
-                                Download
-                            </button>
-                        </div>
-
-                        <!-- Kenya February 2017 -->
-                        <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
-                            <div class="flex items-center space-x-4">
-                                <span class="material-icons text-green-600 text-2xl">description</span>
-                                <div>
-                                    <h3 class="font-medium text-gray-900">Kenya February 2017</h3>
-                                </div>
-                            </div>
-                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center text-sm font-medium">
-                                <span class="material-icons text-sm mr-1">download</span>
-                                Download
-                            </button>
-                        </div>
-
-                        <!-- Kenya March 2017 -->
-                        <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
-                            <div class="flex items-center space-x-4">
-                                <span class="material-icons text-green-600 text-2xl">description</span>
-                                <div>
-                                    <h3 class="font-medium text-gray-900">Kenya March 2017</h3>
-                                </div>
-                            </div>
-                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center text-sm font-medium">
-                                <span class="material-icons text-sm mr-1">download</span>
-                                Download
-                            </button>
-                        </div>
-
-                        <!-- Kenya April 2017 -->
-                        <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
-                            <div class="flex items-center space-x-4">
-                                <span class="material-icons text-green-600 text-2xl">description</span>
-                                <div>
-                                    <h3 class="font-medium text-gray-900">Kenya April 2017</h3>
-                                </div>
-                            </div>
-                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center text-sm font-medium">
-                                <span class="material-icons text-sm mr-1">download</span>
-                                Download
-                            </button>
-                        </div>
-
-                        <!-- Kenya May 2017 -->
-                        <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
-                            <div class="flex items-center space-x-4">
-                                <span class="material-icons text-green-600 text-2xl">description</span>
-                                <div>
-                                    <h3 class="font-medium text-gray-900">Kenya May 2017</h3>
-                                </div>
-                            </div>
-                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center text-sm font-medium">
-                                <span class="material-icons text-sm mr-1">download</span>
-                                Download
-                            </button>
-                        </div>
-
-                        <!-- Kenya June 2017 -->
-                        <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
-                            <div class="flex items-center space-x-4">
-                                <span class="material-icons text-green-600 text-2xl">description</span>
-                                <div>
-                                    <h3 class="font-medium text-gray-900">Kenya June 2017</h3>
-                                </div>
-                            </div>
-                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center text-sm font-medium">
-                                <span class="material-icons text-sm mr-1">download</span>
-                                Download
-                            </button>
-                        </div>
+                    <div class="space-y-4 mb-8" id="dataset-list">
+                        <!-- Datasets will be loaded dynamically -->
                     </div>
 
                     <!-- Pagination -->
-                    <div class="flex justify-center items-center space-x-2 mb-8">
-                        <button class="px-3 py-2 text-gray-500 hover:text-gray-700">Previous</button>
-                        <button class="px-3 py-2 bg-blue-600 text-white rounded">1</button>
-                        <button class="px-3 py-2 text-gray-500 hover:text-gray-700">2</button>
-                        <button class="px-3 py-2 text-gray-500 hover:text-gray-700">3</button>
-                        <span class="px-3 py-2 text-gray-500">...</span>
-                        <button class="px-3 py-2 text-gray-500 hover:text-gray-700">10</button>
-                        <button class="px-3 py-2 text-gray-500 hover:text-gray-700">Next</button>
-                    </div>
+                    <div id="pagination"></div>
 
                     <!-- Supporting Documentation -->
                     <div>
@@ -278,9 +191,134 @@
     <script type="module">
         import { createHeader } from './components/header.js';
         import { createFooter } from './components/footer.js';
+        import { createDatasetSidebar } from './components/dataset-sidebar.js';
+        import { generateDatasetList, createDatasetListHTML, createPaginationHTML, sortDatasets } from './components/dataset-list.js';
+        
+        // Pagination and search state
+        let currentPage = 1;
+        const itemsPerPage = 10;
+        let allDatasets = [];
+        let filteredDatasets = [];
+        let searchTerm = '';
+        let currentSort = 'year-desc';
+        
+        // Initialize the page
+        function initializePage() {
+            allDatasets = generateDatasetList();
+            filteredDatasets = [...allDatasets];
+            currentPage = 1;
+            updateDisplay();
+            setupSearch();
+            setupSorting();
+        }
+        
+        // Setup search functionality
+        function setupSearch() {
+            const searchInput = document.getElementById('search-input');
+            const clearButton = document.getElementById('clear-search');
+            
+            searchInput.addEventListener('input', function(e) {
+                searchTerm = e.target.value.toLowerCase().trim();
+                performSearch();
+                updateClearButton();
+            });
+            
+            clearButton.addEventListener('click', function() {
+                searchInput.value = '';
+                searchTerm = '';
+                performSearch();
+                updateClearButton();
+            });
+        }
+        
+        // Update clear button visibility
+        function updateClearButton() {
+            const clearButton = document.getElementById('clear-search');
+            if (searchTerm) {
+                clearButton.classList.remove('hidden');
+            } else {
+                clearButton.classList.add('hidden');
+            }
+        }
+        
+        // Setup sorting functionality
+        function setupSorting() {
+            const sortSelect = document.getElementById('sort-select');
+            sortSelect.addEventListener('change', function(e) {
+                currentSort = e.target.value;
+                applySorting();
+            });
+        }
+        
+        // Apply sorting to datasets
+        function applySorting() {
+            filteredDatasets = sortDatasets(filteredDatasets, currentSort);
+            currentPage = 1; // Reset to first page when sorting
+            updateDisplay();
+        }
+        
+        
+        // Perform search and filter datasets
+        function performSearch() {
+            if (searchTerm === '') {
+                filteredDatasets = [...allDatasets];
+            } else {
+                filteredDatasets = allDatasets.filter(dataset => {
+                    // Create comprehensive searchable text with both abbreviated and full month names
+                    const monthNames = {
+                        'jan': 'january', 'feb': 'february', 'mar': 'march', 'apr': 'april',
+                        'may': 'may', 'jun': 'june', 'jul': 'july', 'aug': 'august',
+                        'sep': 'september', 'oct': 'october', 'nov': 'november', 'dec': 'december'
+                    };
+                    
+                    const fullMonthName = monthNames[dataset.month.toLowerCase()] || '';
+                    const searchableText = `${dataset.displayName} ${dataset.year} ${dataset.month} ${fullMonthName} ${dataset.fileName}`.toLowerCase();
+                    
+                    return searchableText.includes(searchTerm);
+                });
+            }
+            
+            // Apply current sorting to filtered results
+            filteredDatasets = sortDatasets(filteredDatasets, currentSort);
+            currentPage = 1; // Reset to first page when searching
+            updateDisplay();
+        }
+        
+        // Update the display with current page data
+        function updateDisplay() {
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const currentDatasets = filteredDatasets.slice(startIndex, endIndex);
+            const totalPages = Math.ceil(filteredDatasets.length / itemsPerPage);
+            
+            // Update dataset list
+            document.getElementById('dataset-list').innerHTML = createDatasetListHTML(currentDatasets);
+            
+            // Update pagination
+            document.getElementById('pagination').innerHTML = createPaginationHTML(currentPage, totalPages);
+            
+            // Update dataset count
+            const countText = searchTerm ? 
+                `${filteredDatasets.length} of ${allDatasets.length} datasets found` : 
+                `${allDatasets.length} datasets found`;
+            document.querySelector('.text-gray-600.font-medium').textContent = countText;
+        }
+        
+        // Global function for pagination buttons
+        window.changePage = function(page) {
+            currentPage = page;
+            updateDisplay();
+        };
+        
         
         // Insert header with current page indicator
         document.getElementById('header').innerHTML = createHeader('data');
+        
+        // Insert dataset sidebar
+        document.getElementById('dataset-sidebar').innerHTML = createDatasetSidebar();
+        
+        // Initialize the page
+        initializePage();
         
         // Insert footer
         document.getElementById('footer').innerHTML = createFooter();
