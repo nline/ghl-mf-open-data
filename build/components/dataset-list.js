@@ -7,8 +7,8 @@ export function generateDatasetList() {
     let year = 2017;
     let monthIndex = 5; // June is index 5
     
-    // Generate until June 2025
-    while (year < 2025 || (year === 2025 && monthIndex <= 5)) { // June is index 5
+    // Generate until September 2025
+    while (year < 2025 || (year === 2025 && monthIndex <= 8)) { // September is index 8
         const monthName = months[monthIndex];
         const fileName = `Kenya_${year}_${monthName}.parquet`;
         const s3Url = `s3://ghl-mfs-data/data/kenya/${fileName}`;
